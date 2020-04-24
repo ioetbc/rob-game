@@ -9,8 +9,8 @@ const handle = app.getRequestHandler()
 app.prepare().then(() => {
   const server = express()
 
-  server.get('/about', (req, res) => {
-    return app.render(req, res, '/about', req.query)
+  server.get('/', (req, res) => {
+    return app.render(req, res, '/', req.query)
   })
 
   server.all('*', (req, res) => {
