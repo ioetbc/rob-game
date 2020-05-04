@@ -15,6 +15,25 @@ module.exports = _arrayWithHoles;
 
 /***/ }),
 
+/***/ "./node_modules/@babel/runtime/helpers/assertThisInitialized.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/assertThisInitialized.js ***!
+  \**********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function _assertThisInitialized(self) {
+  if (self === void 0) {
+    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+  }
+
+  return self;
+}
+
+module.exports = _assertThisInitialized;
+
+/***/ }),
+
 /***/ "./node_modules/@babel/runtime/helpers/classCallCheck.js":
 /*!***************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/classCallCheck.js ***!
@@ -102,33 +121,49 @@ module.exports = _createClass;
 
 /***/ }),
 
-/***/ "./node_modules/@babel/runtime/helpers/esm/extends.js":
-/*!************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/esm/extends.js ***!
-  \************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "./node_modules/@babel/runtime/helpers/getPrototypeOf.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/getPrototypeOf.js ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _extends; });
-function _extends() {
-  _extends = Object.assign || function (target) {
-    for (var i = 1; i < arguments.length; i++) {
-      var source = arguments[i];
-
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
-    }
-
-    return target;
+function _getPrototypeOf(o) {
+  module.exports = _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
+    return o.__proto__ || Object.getPrototypeOf(o);
   };
-
-  return _extends.apply(this, arguments);
+  return _getPrototypeOf(o);
 }
+
+module.exports = _getPrototypeOf;
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/inherits.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/inherits.js ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var setPrototypeOf = __webpack_require__(/*! ./setPrototypeOf */ "./node_modules/@babel/runtime/helpers/setPrototypeOf.js");
+
+function _inherits(subClass, superClass) {
+  if (typeof superClass !== "function" && superClass !== null) {
+    throw new TypeError("Super expression must either be null or a function");
+  }
+
+  subClass.prototype = Object.create(superClass && superClass.prototype, {
+    constructor: {
+      value: subClass,
+      writable: true,
+      configurable: true
+    }
+  });
+  if (superClass) setPrototypeOf(subClass, superClass);
+}
+
+module.exports = _inherits;
 
 /***/ }),
 
@@ -270,6 +305,29 @@ module.exports = _nonIterableRest;
 
 /***/ }),
 
+/***/ "./node_modules/@babel/runtime/helpers/possibleConstructorReturn.js":
+/*!**************************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/possibleConstructorReturn.js ***!
+  \**************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var _typeof = __webpack_require__(/*! ../helpers/typeof */ "./node_modules/@babel/runtime/helpers/typeof.js");
+
+var assertThisInitialized = __webpack_require__(/*! ./assertThisInitialized */ "./node_modules/@babel/runtime/helpers/assertThisInitialized.js");
+
+function _possibleConstructorReturn(self, call) {
+  if (call && (_typeof(call) === "object" || typeof call === "function")) {
+    return call;
+  }
+
+  return assertThisInitialized(self);
+}
+
+module.exports = _possibleConstructorReturn;
+
+/***/ }),
+
 /***/ "./node_modules/@babel/runtime/helpers/setPrototypeOf.js":
 /*!***************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/setPrototypeOf.js ***!
@@ -350,121 +408,6 @@ module.exports = __webpack_require__(/*! regenerator-runtime */ "./node_modules/
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/next/dist/compiled/postcss-loader/index.js?!./node_modules/resolve-url-loader/index.js?!./node_modules/sass-loader/dist/cjs.js?!./styles/global.scss":
-/*!********************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js??ref--5-oneOf-6-1!./node_modules/next/dist/compiled/postcss-loader??__nextjs_postcss!./node_modules/resolve-url-loader??ref--5-oneOf-6-3!./node_modules/sass-loader/dist/cjs.js??ref--5-oneOf-6-4!./styles/global.scss ***!
-  \********************************************************************************************************************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(true);
-// Module
-exports.push([module.i, "@charset \"UTF-8\";\n/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */\nhtml, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {\n  margin: 0;\n  padding: 0; }\n\nh1, h2, h3, h4, h5, h6 {\n  font-size: 100%;\n  font-weight: normal; }\n\nul {\n  list-style: none; }\n\nbutton, input, select, textarea {\n  margin: 0; }\n\nhtml {\n  box-sizing: border-box; }\n\n*, *::before, *::after {\n  box-sizing: inherit; }\n\nimg, video {\n  height: auto;\n  max-width: 100%; }\n\niframe {\n  border: 0; }\n\ntable {\n  border-collapse: collapse;\n  border-spacing: 0; }\n\ntd, th {\n  padding: 0; }\n\ntd:not([align]), th:not([align]) {\n  text-align: left; }\n\n.video {\n  width: 100vw;\n  height: 100vh;\n  background: grey; }\n\nimg {\n  max-height: 395px; }\n\n#target, #target2, #target3, #target4, #target5, #target6, #target7, #target8 {\n  min-height: 100vh;\n  min-width: 400px;\n  max-width: 400px;\n  transform-origin: right; }\n\n.image-wrapper {\n  height: 100%;\n  display: flex;\n  align-items: flex-end; }\n\n/*\n    General styles\n  */\nbody {\n  background-color: #c7e1ff; }\n\nbody, html {\n  height: 100%; }\n\n/*\n    Containers\n  */\n#content-wrapper, #example-wrapper {\n  height: 100%; }\n\n.scrollContainer {\n  height: 100%;\n  margin: auto; }\n\n#example-wrapper .scrollContent {\n  height: 100%; }\n\n.horizontal.scrollContainer {\n  overflow-y: hidden;\n  overflow-x: scroll; }\n\n#example-wrapper.scrollContainer .scrollContent {\n  width: 100%;\n  height: auto; }\n\n#example-wrapper.scrollContainer.horizontal .scrollContent {\n  width: auto;\n  height: 100%; }\n\n#example-wrapper.horizontal {\n  white-space: nowrap;\n  font-size: 0;\n  /* fix for spaces between inline block divs */ }\n\n#example-wrapper.horizontal div {\n  font-size: 13px; }\n\n#example-wrapper .scrollContent div {\n  font-size: 13px; }\n\nsection#titlechart {\n  text-align: center;\n  position: relative;\n  height: 100%;\n  min-height: 500px;\n  min-width: 100%;\n  height: 100vh; }\n\n.horizontal section, .horizontal section#titlechart {\n  display: inline-block;\n  vertical-align: top;\n  height: 100%; }\n\nsection#titlechart #description {\n  top: 50%;\n  left: 50%;\n  position: absolute;\n  width: 600px;\n  height: 300px;\n  margin: -150px auto auto -300px; }\n\nsection#titlechart.home #description {\n  padding-top: 0;\n  padding-bottom: 100px; }\n\nsection#titlechart #description h1 {\n  margin: 0; }\n\nsection#titlechart #description h2 {\n  margin-bottom: 20px; }\n\nsection#titlechart #description a.viewsource {\n  margin-bottom: 20px;\n  display: inline-block; }\n\nsection#titlechart #description code {\n  background-color: #E1F1FF;\n  padding-left: 2px;\n  padding-right: 2px;\n  white-space: nowrap; }\n\nsection#titlechart #description ol, section#titlechart #description p {\n  text-align: left;\n  max-width: 400px;\n  margin: 10px auto 10px auto;\n  white-space: normal; }\n\nsection#titlechart #description ol {\n  list-style-position: outside; }\n\n#example-wrapper section#titlechart #description:after {\n  content: \"â†§\";\n  font-size: 40px;\n  display: block; }\n\n#example-wrapper.horizontal section#titlechart #description:after {\n  content: \"â†¦\"; }\n\nsection.demo * {\n  font-size: 13px; }\n\nsection.demo {\n  font-size: 0;\n  text-align: center; }\n\nsection.demo.fullheight {\n  min-height: 100%; }\n\nsection.demo.doublewidth, .spacer.doublewidth {\n  min-width: 200%; }\n\n.horizontal section.demo {\n  text-align: inherit;\n  white-space: nowrap; }\n\n.horizontal section.demo.fullwidth {\n  min-width: 100%; }\n\n/*\n    Elements\n  */\nh1.badge {\n  /*cursor: text;*/\n  pointer-events: none; }\n\nh1.badge:after {\n  vertical-align: text-top;\n  display: inline-block;\n  position: absolute;\n  cursor: pointer;\n  margin-left: 10px;\n  font-family: \"Source Sans Pro\", Arial, sans-serif;\n  font-weight: bold;\n  font-style: normal;\n  color: #FFFFFF;\n  font-size: 12px;\n  padding: 2px 5px;\n  dius: 10px;\n  pointer-events: all; }\n\nh1.badge.gsap:after {\n  content: \"GSAP\";\n  background-color: #61AC27; }\n\nh1.badge.velocity:after {\n  content: \"Velocity.js\";\n  background-color: #f53a47; }\n\n.spacer {\n  text-align: center;\n  min-height: 100px; }\n\n.spacer.s0 {\n  min-height: 1px; }\n\n.spacer.s1 {\n  min-height: 100px; }\n\n.spacer.s2 {\n  min-height: 200px; }\n\n.spacer.s3 {\n  min-height: 300px; }\n\n.spacer.s4 {\n  min-height: 400px; }\n\n.spacer.s5 {\n  min-height: 500px; }\n\n.spacer.s6 {\n  min-height: 600px; }\n\n.spacer.s7 {\n  min-height: 700px; }\n\n.spacer.s8 {\n  min-height: 800px; }\n\n.spacer.s9 {\n  min-height: 900px; }\n\n.spacer.s10 {\n  min-height: 1000px; }\n\n.spacer.s_viewport {\n  min-height: 100%; }\n\n.horizontal .spacer {\n  margin-bottom: 0;\n  min-height: 0;\n  min-height: initial;\n  min-width: 100px;\n  height: 100%;\n  display: inline-block;\n  vertical-align: top; }\n\n.horizontal .spacer.s0 {\n  min-width: 1px; }\n\n.horizontal .spacer.s1 {\n  min-width: 100px; }\n\n.horizontal .spacer.s2 {\n  min-width: 200px; }\n\n.horizontal .spacer.s3 {\n  min-width: 300px; }\n\n.horizontal .spacer.s4 {\n  min-width: 400px; }\n\n.horizontal .spacer.s5 {\n  min-width: 500px; }\n\n.horizontal .spacer.s6 {\n  min-width: 600px; }\n\n.horizontal .spacer.s7 {\n  min-width: 700px; }\n\n.horizontal .spacer.s8 {\n  min-width: 800px; }\n\n.horizontal .spacer.s9 {\n  min-width: 900px; }\n\n.horizontal .spacer.s10 {\n  min-width: 1000px; }\n\n.spacer.s_viewport {\n  min-width: 100%; }\n\n.box1, .box2, .box3 {\n  display: inline-block;\n  position: relative;\n  dius: 8px;\n  border: 0px solid white;\n  text-align: center;\n  vertical-align: middle;\n  padding: 0 5px; }\n\n.box1 {\n  min-width: 100px;\n  height: 100px;\n  margin: 0 auto 0 auto; }\n\n.box2 {\n  min-width: 50px;\n  height: 50px;\n  margin: 25px auto 25px auto; }\n\n.box3 {\n  min-width: 26px;\n  height: 26px;\n  margin: 37px auto 37px auto; }\n\n.horizontal .box1 {\n  top: 50%;\n  max-height: 100px;\n  margin: -50px 0 auto 0; }\n\n.horizontal .box2 {\n  top: 50%;\n  max-height: 50px;\n  margin: -25px 25px auto 25px; }\n\n.horizontal .box3 {\n  top: 50%;\n  max-height: 26px;\n  margin: -13px 37px auto 37px; }\n\n.box1 p, .box2 p, .box3 p {\n  margin: 5px 15px 5px 15px;\n  font-size: 13px;\n  font-weight: lighter;\n  color: white; }\n\n.box1 p:first-child {\n  margin-top: 27px; }\n\n.box1 a, .box2 a, .box3 a {\n  color: white; }\n\n.box1.white *, .box2.white *, .box3.white * {\n  color: #2e639e; }\n\n.box2.mario {\n  background-color: #004fae;\n  border-top: 30px solid #fc112f;\n  border-bottom: 10px solid #c4723b; }\n\n.box3.goomba {\n  min-width: 30px;\n  height: 4px;\n  margin-top: 75px;\n  margin-left: 30px;\n  margin-bottom: 25px;\n  background-color: #b39475;\n  border-top: 30px solid #744527;\n  border-bottom: 6px solid #c4723b; }\n\n/*\n    colors\n  */\n.box1.outline, .box2.outline, .box3.outline {\n  border: 1px solid white; }\n\n.blue {\n  border: 1px solid black; }\n\n.turqoise {\n  background-color: #38ced7; }\n\n.brown {\n  background-color: #a66f28; }\n\n.bordeaux {\n  background-color: #953543; }\n\n.skin {\n  background-color: #ED9F4C; }\n\n.black {\n  background-color: #000000; }\n\n.white {\n  background-color: #FFFFFF; }\n\n.red {\n  background-color: #cf3535; }\n\n.green {\n  background-color: #22d659; }\n\n.orange {\n  background-color: #ea6300; }\n\n/*\n    Form\n  */\nform.move {\n  text-align: left;\n  position: fixed;\n  top: 70px;\n  left: 20px;\n  display: block;\n  background-color: white;\n  background-color: rgba(255, 255, 255, 0.9);\n  padding: 20px;\n  z-index: 20; }\n\nhtml.touch form.move {\n  top: 120px; }\n\nform > div, form > fieldset > div {\n  margin: 10px 0 10px 0;\n  display: block; }\n\nform .slider {\n  min-width: 199px;\n  display: inline-block;\n  position: relative;\n  height: 9px;\n  border-right: 1px solid #2e639e;\n  border-left: 1px solid #2e639e;\n  vertical-align: middle;\n  margin-right: 5px; }\n\nform .slider .trackbar {\n  margin-top: 4px;\n  border-top: 1px solid #2e639e;\n  height: 4px; }\n\nform .slider .handle {\n  height: 14px;\n  width: 6px;\n  position: absolute;\n  top: -4px;\n  margin-left: -4px;\n  left: 0%;\n  background-color: white;\n  cursor: pointer;\n  border: 1px solid #2e639e; }\n\nform .slider .handle:hover, form .slider.dragging .handle {\n  background-color: #79b0ee; }\n\nform .slider + input {\n  background-color: transparent;\n  border: none;\n  padding: 0; }\n\nform #options label, form #actions label, form #tweenparams label {\n  min-width: 90px;\n  text-align: right;\n  display: inline-block;\n  margin-right: 10px; }\n\nform #tweenparams label {\n  min-width: 50px; }\n\nform #options button {\n  width: 65px; }\n\nform fieldset {\n  padding: 0 10px 0 10px;\n  margin: 5px 0 0 0; }\n\nform fieldset:first-child {\n  margin-top: -5px; }\n\nform fieldset legend {\n  padding: 0 5px 0 5px;\n  margin: 0; }\n\n.move {\n  cursor: move; }\n\n.move * {\n  cursor: auto; }\n\n.move label {\n  cursor: default; }\n\n/*\n    MENU\n  */\nul#menu, ul#menu ul {\n  list-style: none;\n  padding: 0; }\n\nul#menu {\n  position: fixed;\n  z-index: 999;\n  width: 540px;\n  left: 50%;\n  margin: 10px auto auto -270px;\n  text-align: center; }\n\nul#menu > li {\n  display: inline-block;\n  margin: 0 5px 0 5px;\n  position: relative;\n  min-height: 30px;\n  background-color: #79b0ee;\n  vertical-align: top;\n  min-width: 165px; }\n\nul#menu li a {\n  padding: 0 5px 0 5px;\n  display: block;\n  text-decoration: none;\n  line-height: 30px;\n  color: white;\n  text-transform: uppercase;\n  letter-spacing: 0.05em;\n  font-size: 15px; }\n\nul#menu ul {\n  display: none; }\n\nul#menu li:hover > a, ul#menu li.current > a {\n  color: #2e639e; }\n\nul#menu li:hover ul, html.touch ul#menu li.open ul {\n  display: block;\n  width: 100%;\n  padding: 5px 0 5px 0;\n  border-top: 1px dashed white; }\n\nul#menu ul li a {\n  text-transform: none;\n  font-size: 12px;\n  line-height: 20px;\n  font-weight: lighter;\n  color: #133f71; }\n\nul#menu ul li.current a {\n  background-color: #FFFFFF; }\n\nul#menu ul li a:hover {\n  background-color: #3883d8;\n  color: white; }\n\n.menuwrap {\n  position: fixed;\n  background-color: white;\n  background-color: rgba(255, 255, 255, 0.9);\n  min-width: 540px;\n  left: 50%;\n  margin-left: -270px;\n  min-height: 51px;\n  border-bottom-left-radius: 8px;\n  border-bottom-right-radius: 8px;\n  z-index: 99999;\n  text-align: center;\n  transition: top 0.5s;\n  -webkit-transition: top 0.5s;\n  /* Safari */\n  transition-delay: 1s;\n  -webkit-transition-delay: 1s;\n  /* Safari */ }\n\n#titlechart .menuwrap {\n  position: absolute;\n  z-index: inherit;\n  background-color: transparent; }\n\n.menuwrap ul#menu {\n  position: absolute; }\n\n.menuwrap > a.prev, .menuwrap > a.next {\n  display: block;\n  position: absolute;\n  background-color: white;\n  background-color: rgba(255, 255, 255, 0.9);\n  line-height: 30px;\n  width: 30px;\n  height: 30px;\n  top: 11px;\n  margin: 0 280px;\n  box-sizing: border-box; }\n\n.menuwrap > a.prev:hover, .menuwrap > a.next:hover {\n  text-decoration: none;\n  background-color: #79b0ee;\n  color: #FFFFFF; }\n\n.menuwrap > a.prev {\n  margin-left: 0;\n  padding-right: 2px;\n  right: 50%; }\n\n.menuwrap > a.next {\n  margin-right: 0;\n  padding-left: 4px;\n  left: 50%; }\n\n/*\n    mobile\n  */\nhtml.touch .menuwrap {\n  z-index: 999999;\n  box-sizing: content-box;\n  min-width: 0;\n  width: 100%;\n  margin: 0;\n  left: 0;\n  top: 0;\n  height: auto;\n  background-color: transparent; }\n\nhtml.touch ul#menu {\n  position: static;\n  margin: 100px 0 0 0;\n  text-align: center;\n  width: 100%;\n  left: 0;\n  display: none; }\n\nhtml.touch .menuwrap.open {\n  height: 100%;\n  background-color: rgba(255, 255, 255, 0.9);\n  overflow: scroll; }\n\nhtml.touch .menuwrap.open ul#menu {\n  display: block; }\n\nhtml.touch ul#menu > li {\n  display: block;\n  margin: 10px;\n  height: auto; }\n\nhtml.touch ul#menu ul {\n  margin-top: 10px;\n  padding-top: 10px;\n  border-top: 1px dashed white; }\n\nhtml.touch ul#menu li {\n  padding: 10px 0; }\n\nhtml.touch ul#menu > li a {\n  color: #2e639e;\n  font-size: 4em;\n  line-height: 1.2em; }\n\nhtml.touch ul#menu ul li a {\n  font-size: 2.5em;\n  line-height: 1.2em; }\n\nhtml.touch ul#menu ul {\n  display: block; }\n\nhtml.touch ul#menu ul li.current a {\n  background-color: transparent; }\n\nhtml.touch ul#menu ul li a:hover {\n  background-color: transparent; }\n\nhtml.touch ul#menu ul li a:active {\n  color: white; }\n\nhtml.touch .menuwrap > a.prev, html.touch .menuwrap > a.next, html.touch .menubtn {\n  width: 80px;\n  height: 80px;\n  dius: 40px;\n  top: 10px;\n  background-color: #3883d8;\n  color: white;\n  font-size: 4em;\n  line-height: 1.5em; }\n\nhtml.touch .menuwrap > a.prev:active, html.touch .menuwrap > a.next:active, html.touch .menubtn:active {\n  background-color: white;\n  color: #3883d8;\n  border: 2px solid #3883d8; }\n\nhtml.touch .menuwrap > a.prev {\n  margin-right: 70px;\n  padding-right: 10px; }\n\nhtml.touch .menuwrap > a.next {\n  margin-left: 70px;\n  padding-left: 10px; }\n\nhtml.touch .menubtn {\n  padding: 0;\n  border: 0;\n  position: absolute;\n  left: 50%;\n  margin-left: -40px;\n  line-height: 0;\n  outline: none;\n  -webkit-appearance: none;\n     -moz-appearance: none;\n          appearance: none;\n  justify-content: center;\n  align-items: center;\n  transition: 0.3s;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none; }\n\nhtml.touch .menubtn:active .button-lines, html.touch .menubtn:active .button-lines::before, html.touch .menubtn:active .button-lines::after {\n  background: #3883d8; }\n\nhtml.touch .menubtn .button-lines, html.touch .menubtn .button-lines::before, html.touch .menubtn .button-lines::after {\n  display: inline-block;\n  height: 6px;\n  width: 35px;\n  dius: 4px;\n  transition: 0.3s;\n  background: #FFFFFF;\n  position: relative;\n  left: 0;\n  top: -5px; }\n\nhtml.touch .menubtn .button-lines::before, html.touch .menubtn .button-lines::after {\n  content: '';\n  position: absolute; }\n\nhtml.touch .menubtn .button-lines::before {\n  top: 12px; }\n\nhtml.touch .menubtn .button-lines::after {\n  top: -12px; }\n\nhtml.touch .menuwrap.open .menubtn .button-lines {\n  background: transparent; }\n\nhtml.touch .menuwrap.open .menubtn .button-lines::before {\n  top: 0px;\n  transform: rotate3d(0, 0, 1, -45deg);\n  transform-origin: 50% 50%; }\n\nhtml.touch .menuwrap.open .menubtn .button-lines::after {\n  top: 0px;\n  transform: rotate3d(0, 0, 1, 45deg);\n  transform-origin: 50% 50%; }\n\n/*\n    Codecontainer\n  */\n#codecontainer {\n  position: fixed;\n  top: 30px;\n  bottom: 20px;\n  right: 20px;\n  left: 20px;\n  background-color: white;\n  dius: 4px;\n  z-index: 99999;\n  min-height: 300px; }\n\n#codecontainer pre {\n  margin: 0;\n  padding: 0;\n  line-height: 16px;\n  -moz-tab-size: 4;\n    -o-tab-size: 4;\n       tab-size: 4; }\n\n#codecontainer pre .break {\n  background-color: #F6F6F6;\n  font-weight: bold;\n  color: #aaa; }\n\n#codecontainer pre .break:before {\n  content: \"áŽ’\"; }\n\n#codecontainer .codewrap {\n  position: absolute;\n  top: 10px;\n  bottom: 10px;\n  width: 100%;\n  overflow: hidden;\n  overflow: scroll;\n  white-space: nowrap; }\n\n#codecontainer .code, #codecontainer .linenumbers {\n  min-height: 100%; }\n\n#codecontainer .code {\n  padding: 0;\n  display: inline-block; }\n\n#codecontainer .code {\n  padding: 0 15px 10px 5px; }\n\n#codecontainer .linenumbers {\n  float: left;\n  padding: 0px 5px 0px 10px;\n  color: #aaa;\n  text-align: right;\n  border-right: 1px solid #e5e5e5; }\n\n#codecontainer span.indent {\n  width: 31px;\n  display: inline-block;\n  white-space: nowrap; }\n\n#codecontainer #close.button {\n  position: fixed;\n  top: 20px;\n  right: 10px;\n  width: 20px;\n  height: 20px; }\n\n#codecontainer #select.button {\n  position: fixed;\n  top: 20px;\n  right: 40px;\n  height: 20px;\n  padding: 0 10px 0 10px; }\n\n#codecontainer #close.button:after {\n  content: \"à¾¾\"; }\n\n#codecontainer .button {\n  background-color: white;\n  dius: 10px;\n  border: 1px solid #e5e5e5;\n  text-align: center;\n  cursor: pointer;\n  color: #2e639e; }\n\n#codecontainer .button:hover {\n  background-color: #3883d8;\n  color: white; }\n\n/*\n    OTHER\n  */\na.viewsource:after {\n  content: \" }\"; }\n\na.viewsource:before {\n  content: \"{ \"; }\n\n#parallaxContainer {\n  width: 900px;\n  height: 500px;\n  top: 30px;\n  position: relative; }\n\n#parallaxContainer .layer1 {\n  height: 100%;\n  text-align: center; }\n\n#parallaxContainer .layer2 {\n  position: absolute;\n  height: 139px;\n  width: 100%;\n  bottom: 32px; }\n\n#parallaxContainer .layer3 {\n  position: absolute;\n  height: 32px;\n  width: 100%;\n  bottom: 0px; }\n\n#parallaxText {\n  width: 0;\n  height: 100%;\n  margin: auto;\n  position: relative; }\n\n#parallaxText .layer1, #parallaxText .layer2, #parallaxText .layer3 {\n  position: absolute;\n  font-size: 50px;\n  line-height: 50px;\n  margin-left: -150px;\n  margin-top: -25px;\n  width: 300px;\n  top: 50%;\n  left: 50%;\n  text-align: center;\n  color: #133f71; }\n\n#parallaxText .layer1 {\n  top: 48%; }\n\n#parallaxText .layer2 {\n  top: 49%; }\n\n#parallaxText .layer3 a {\n  display: block;\n  font-family: \"Source Sans Pro\", Arial, sans-serif;\n  font-style: normal;\n  font-weight: normal; }\n\n#parallax1 > div, #parallax2 > div, #parallax3 > div {\n  -webkit-transform: translateZ(0);\n  -webkit-backface-visibility: hidden;\n  -webkit-perspective: 1000; }\n\n.dynamicContent #content {\n  width: 390px;\n  margin: auto;\n  text-align: left; }\n\n.dynamicContent #content .box1 {\n  margin: 10px; }\n\n.dynamicContent #loader {\n  height: 0;\n  overflow: hidden;\n  line-height: 60px; }\n\n.dynamicContent #loader.active {\n  height: 60px; }\n\n.dynamicContent #loader img {\n  vertical-align: text-bottom; }\n\n#customactions {\n  height: 160px;\n  width: 170px;\n  margin: auto;\n  padding-top: 40px;\n  text-align: left; }\n\n#customactions label {\n  width: 100px;\n  display: inline-block; }\n\n#customactions code {\n  color: #3883d8; }\n\n#customactions a.viewsource {\n  margin-top: 20px;\n  display: block;\n  text-align: center; }\n\n.demo.responsiveDuration {\n  position: relative; }\n\n.responsiveDuration .box1 {\n  top: 50%;\n  left: 50%;\n  position: absolute;\n  margin-top: -50px;\n  margin-left: -50px; }\n\n#destroybox a {\n  display: block;\n  margin-top: 20px; }\n\n#destroybox a.disabled {\n  color: #79b0ee; }\n\n#mobileadvanced {\n  width: 150px;\n  height: 150px; }\n\n#mobileadvanced p {\n  margin-top: 50px; }\n\n#multiDirect {\n  text-align: left;\n  position: relative; }\n\n#multiDirect .box1 {\n  left: 50vw;\n  top: 200px;\n  margin-left: -60px; }\n\n#multiDirect .box1 p:first-child {\n  margin-top: 20px; }\n\n#imagesequence {\n  height: 300px; }\n\n.copyright {\n  font-feature-settings: ;\n  font-variant: italic;\n  font-size: 11px; }\n\n#bezier {\n  overflow: hidden;\n  position: relative; }\n\n#bezier #plane {\n  position: absolute;\n  left: -100px; }\n\n#bezier a.viewsource {\n  margin: 100px;\n  display: inline-block; }\n\n.demo#section-slides, .demo#section-wipes {\n  height: 100%;\n  width: 100%;\n  background-image: none; }\n\n.demo#section-slides .panel > b, .demo#section-wipes .panel > b {\n  font-size: 15px;\n  color: white;\n  position: relative;\n  display: block;\n  height: 0;\n  overflow: visible;\n  top: 50%; }\n\n/*\n\n  Codehighlighting\n  github.com style (c) Vasily Polovnyov <vast@whiteants.net>\n\n  */\n.hljs {\n  display: block;\n  padding: 0.5em;\n  color: #333;\n  /*background: #f8f8f8*/ }\n\n.hljs-comment,\n.hljs-template_comment,\n.diff .hljs-header,\n.hljs-javadoc {\n  color: #998;\n  font-style: italic; }\n\n.hljs-keyword,\n.css .rule .hljs-keyword,\n.hljs-winutils,\n.javascript .hljs-title,\n.nginx .hljs-title,\n.hljs-subst,\n.hljs-request,\n.hljs-status {\n  color: #333;\n  font-weight: bold; }\n\n.hljs-number,\n.hljs-hexcolor,\n.ruby .hljs-constant {\n  color: #099; }\n\n.hljs-string,\n.hljs-tag .hljs-value,\n.hljs-phpdoc,\n.tex .hljs-formula {\n  color: #d14; }\n\n.hljs-title,\n.hljs-id,\n.coffeescript .hljs-params,\n.scss .hljs-preprocessor {\n  color: #900;\n  font-weight: bold; }\n\n.javascript .hljs-title,\n.lisp .hljs-title,\n.clojure .hljs-title,\n.hljs-subst {\n  font-weight: normal; }\n\n.hljs-class .hljs-title,\n.haskell .hljs-type,\n.vhdl .hljs-literal,\n.tex .hljs-command {\n  color: #458;\n  font-weight: bold; }\n\n.hljs-tag,\n.hljs-tag .hljs-title,\n.hljs-rules .hljs-property,\n.django .hljs-tag .hljs-keyword {\n  color: #000080;\n  font-weight: normal; }\n\n.hljs-attribute,\n.hljs-variable,\n.lisp .hljs-body {\n  color: #008080; }\n\n.hljs-regexp {\n  color: #009926; }\n\n.hljs-symbol,\n.ruby .hljs-symbol .hljs-string,\n.lisp .hljs-keyword,\n.tex .hljs-special,\n.hljs-prompt {\n  color: #990073; }\n\n.hljs-built_in,\n.lisp .hljs-title,\n.clojure .hljs-built_in {\n  color: #0086b3; }\n\n.hljs-preprocessor,\n.hljs-pragma,\n.hljs-pi,\n.hljs-doctype,\n.hljs-shebang,\n.hljs-cdata {\n  color: #999;\n  font-weight: bold; }\n\n.hljs-deletion {\n  background: #fdd; }\n\n.hljs-addition {\n  background: #dfd; }\n\n.diff .hljs-change {\n  background: #0086b3; }\n\n.hljs-chunk {\n  color: #aaa; }\n", "",{"version":3,"sources":["/Users/williamcole/Documents/Free/rob-game/styles/global.scss"],"names":[],"mappings":"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","file":"global.scss","sourcesContent":["/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */html,body,p,ol,ul,li,dl,dt,dd,blockquote,figure,fieldset,legend,textarea,pre,iframe,hr,h1,h2,h3,h4,h5,h6{margin:0;padding:0}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}ul{list-style:none}button,input,select,textarea{margin:0}html{box-sizing:border-box}*,*::before,*::after{box-sizing:inherit}img,video{height:auto;max-width:100%}iframe{border:0}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}td:not([align]),th:not([align]){text-align:left}\n\n.video {\n    width: 100vw;\n    height: 100vh;\n    background: grey;\n}\n\nimg {\n    max-height: 395px;\n}\n\n#target, #target2, #target3, #target4, #target5, #target6, #target7, #target8 {\n    min-height: 100vh;\n    min-width: 400px;\n    max-width: 400px;\n    transform-origin: right;\n}\n\n.image-wrapper {\n    height: 100%;\n    display: flex;\n    align-items: flex-end;\n}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n  /*\n    General styles\n  */\n  body {\n    background-color: #c7e1ff;\n  }\n  body, html {\n    height: 100%\n  }\n\n\n  /*\n    Containers\n  */\n  #content-wrapper, #example-wrapper {\n    height: 100%;\n  }\n  .scrollContainer {\n\n  }\n  .scrollContainer {\n    height: 100%;\n    margin: auto;\n  }\n  #example-wrapper .scrollContent {\n    height: 100%;\n  }\n\n  .horizontal.scrollContainer {\n    overflow-y: hidden;\n    overflow-x: scroll;\n  }\n  #example-wrapper.scrollContainer .scrollContent {\n    width: 100%;\n    height: auto;\n  }\n  #example-wrapper.scrollContainer.horizontal .scrollContent {\n    width: auto;\n    height: 100%;\n  }\n  #example-wrapper.horizontal {\n    white-space: nowrap;\n    font-size: 0;  /* fix for spaces between inline block divs */\n  }\n  #example-wrapper.horizontal div {\n    font-size: 13px;\n  }\n\n  #example-wrapper .scrollContent div {\n    font-size: 13px;\n  }\n  #example-wrapper section {\n  }\n\n  section#titlechart {\n    text-align: center;\n    position: relative;\n    height: 100%;\n    min-height: 500px;\n    min-width: 100%;\n    height: 100vh;\n  }\n  .horizontal section, .horizontal section#titlechart{\n    display: inline-block;\n    vertical-align: top;\n    height: 100%;\n  }\n  section#titlechart #description {\n    top: 50%;\n    left: 50%;\n    position: absolute;\n    width: 600px;\n    height: 300px;\n    margin: -150px auto auto -300px;\n  }\n  section#titlechart.home #description {\n    padding-top: 0;\n    padding-bottom: 100px;\n  }\n  section#titlechart #description h1 {\n    margin: 0;\n  }\n  section#titlechart #description h2 {\n    margin-bottom: 20px;\n  }\n  section#titlechart #description a.viewsource {\n    margin-bottom: 20px;\n    display: inline-block;\n  }\n  section#titlechart #description code {\n    background-color: #E1F1FF;\n    padding-left: 2px;\n    padding-right: 2px;\n    white-space: nowrap;\n  }\n\n  section#titlechart #description ol, section#titlechart #description p {\n    text-align: left;\n    max-width: 400px;\n    margin: 10px auto 10px auto;\n    white-space: normal;\n  }\n  section#titlechart #description ol {\n    list-style-position: outside;\n  }\n  #example-wrapper section#titlechart #description:after {\n    content: \"â†§\";\n    font-size: 40px;\n    display: block;\n  }\n  #example-wrapper.horizontal section#titlechart #description:after {\n    content: \"â†¦\";\n  }\n\n\n  section.demo * {\n    font-size: 13px;\n  }\n  section.demo {\n    font-size: 0;\n    text-align: center;\n    // background-image: url(\"../img/example_bg_v.png\");\n  }\n  section.demo.fullheight {\n    min-height: 100%;\n  }\n  section.demo.doublewidth, .spacer.doublewidth {\n    min-width: 200%;\n  }\n  .horizontal section.demo {\n    text-align: inherit;\n    white-space: nowrap;\n    // background-image: url(\"../img/example_bg_h.png\");\n  }\n  .horizontal section.demo.fullwidth {\n    min-width: 100%;\n  }\n  /*\n    Elements\n  */\n  h1.badge {\n    /*cursor: text;*/\n    pointer-events: none;\n  }\n  h1.badge:after {\n    vertical-align: text-top;\n    display: inline-block;\n    position: absolute;\n    cursor: pointer;\n    margin-left: 10px;\n    font-family: \"Source Sans Pro\", Arial, sans-serif;\n    font-weight: bold;\n    font-style: normal;\n    color: #FFFFFF;\n    font-size: 12px;\n    padding: 2px 5px;\n    dius: 10px;\n    pointer-events: all;\n  }\n  h1.badge.gsap:after {\n    content: \"GSAP\";\n    background-color: #61AC27;\n  }\n  h1.badge.velocity:after {\n    content: \"Velocity.js\";\n    background-color: #f53a47;\n  }\n  .spacer {\n    text-align: center;\n    min-height: 100px;\n    // background-image: url(\"../img/example_bg_spacer_v.gif\");\n  }\n  .spacer.s0 {\n    min-height: 1px;\n  }\n  .spacer.s1 {\n    min-height: 100px;\n  }\n  .spacer.s2 {\n    min-height: 200px;\n  }\n  .spacer.s3 {\n    min-height: 300px;\n  }\n  .spacer.s4 {\n    min-height: 400px;\n  }\n  .spacer.s5 {\n    min-height: 500px;\n  }\n  .spacer.s6 {\n    min-height: 600px;\n  }\n  .spacer.s7 {\n    min-height: 700px;\n  }\n  .spacer.s8 {\n    min-height: 800px;\n  }\n  .spacer.s9 {\n    min-height: 900px;\n  }\n  .spacer.s10 {\n    min-height: 1000px;\n  }\n  .spacer.s_viewport {\n    min-height: 100%;\n  }\n  .horizontal .spacer {\n    // background-image: url(\"../img/example_bg_spacer_h.gif\");\n    margin-bottom: 0;\n    min-height: initial;\n    min-width: 100px;\n    height: 100%;\n    display: inline-block;\n    vertical-align: top;\n  }\n  .horizontal .spacer.s0 {\n    min-width: 1px;\n  }\n  .horizontal .spacer.s1 {\n    min-width: 100px;\n  }\n  .horizontal .spacer.s2 {\n    min-width: 200px;\n  }\n  .horizontal .spacer.s3 {\n    min-width: 300px;\n  }\n  .horizontal .spacer.s4 {\n    min-width: 400px;\n  }\n  .horizontal .spacer.s5 {\n    min-width: 500px;\n  }\n  .horizontal .spacer.s6 {\n    min-width: 600px;\n  }\n  .horizontal .spacer.s7 {\n    min-width: 700px;\n  }\n  .horizontal .spacer.s8 {\n    min-width: 800px;\n  }\n  .horizontal .spacer.s9 {\n    min-width: 900px;\n  }\n  .horizontal .spacer.s10 {\n    min-width: 1000px;\n  }\n  .spacer.s_viewport {\n    min-width: 100%;\n  }\n\n  .box1, .box2, .box3 {\n    display: inline-block;\n    position: relative;\n    dius: 8px;\n    border: 0px solid white;\n    text-align: center;\n    vertical-align: middle;\n    padding: 0 5px;\n  }\n  .box1 {\n    min-width: 100px;\n    height: 100px;\n    margin: 0 auto 0 auto;\n  }\n  .box2 {\n    min-width: 50px;\n    height: 50px;\n    margin: 25px auto 25px auto;\n  }\n  .box3 {\n    min-width: 26px;\n    height: 26px;\n    margin: 37px auto 37px auto;\n  }\n  .horizontal .box1 {\n    top: 50%;\n    max-height: 100px;\n    margin: -50px 0 auto 0;\n  }\n  .horizontal .box2 {\n    top: 50%;\n    max-height: 50px;\n    margin: -25px 25px auto 25px;\n  }\n  .horizontal .box3 {\n    top: 50%;\n    max-height: 26px;\n    margin: -13px 37px auto 37px;\n  }\n  .box1 p, .box2 p, .box3 p {\n    margin: 5px 15px 5px 15px;\n    font-size: 13px;\n    font-weight: lighter;\n    color: white;\n  }\n  .box1 p:first-child {\n    margin-top: 27px;\n  }\n  .box1 a, .box2 a, .box3 a {\n    color: white;\n  }\n  .box1.white *, .box2.white *, .box3.white * {\n    color: #2e639e;\n  }\n  .box2.mario {\n    background-color: #004fae;\n    border-top: 30px solid #fc112f;\n    border-bottom: 10px solid #c4723b;\n  }\n  .box3.goomba {\n    min-width: 30px;\n    height: 4px;\n    margin-top: 75px;\n    margin-left: 30px;\n    margin-bottom: 25px;\n    background-color: #b39475;\n    border-top: 30px solid #744527;\n    border-bottom: 6px solid #c4723b;\n  }\n  /*\n    colors\n  */\n\n  .box1.outline, .box2.outline, .box3.outline {\n    border: 1px solid white;\n  }\n  .blue {\n    border: 1px solid black;\n  }\n  .turqoise {\n    background-color: #38ced7;\n  }\n  .brown {\n    background-color: #a66f28;\n  }\n  .bordeaux {\n    background-color: #953543;\n  }\n  .skin {\n    background-color: #ED9F4C;\n  }\n  .black {\n    background-color: #000000;\n  }\n  .white {\n    background-color: #FFFFFF;\n  }\n  .red {\n    background-color: #cf3535;\n  }\n  .green {\n    background-color: #22d659;\n  }\n  .orange {\n    background-color: #ea6300;\n  }\n  /*\n    Form\n  */\n  form.move {\n    text-align: left;\n    position: fixed;\n    top: 70px;\n    left: 20px;\n    display: block;\n    background-color: white;\n    background-color: rgba(255, 255, 255, 0.9);\n    padding: 20px;\n    z-index: 20;\n  }\n  html.touch form.move {\n    top: 120px;\n  }\n  form > div, form > fieldset > div {\n    margin: 10px 0 10px 0;\n    display: block;\n  }\n  form .slider {\n    min-width: 199px;\n    display: inline-block;\n    position: relative;\n    height: 9px;\n    border-right: 1px solid #2e639e;\n    border-left: 1px solid #2e639e;\n    vertical-align: middle;\n    margin-right: 5px;\n  }\n  form .slider .trackbar {\n    margin-top: 4px;\n    border-top: 1px solid #2e639e;\n    height: 4px;\n  }\n  form .slider .handle {\n    height: 14px;\n    width: 6px;\n    position: absolute;\n    top: -4px;\n    margin-left: -4px;\n    left: 0%;\n    background-color: white;\n    cursor: pointer;\n    border: 1px solid #2e639e;\n  }\n  form .slider .handle:hover, form .slider.dragging .handle {\n    background-color: #79b0ee;\n  }\n  form .slider + input {\n    background-color: transparent;\n    border: none;\n    padding: 0;\n  }\n  form #options label, form #actions label, form #tweenparams label {\n    min-width: 90px;\n    text-align: right;\n    display: inline-block;\n    margin-right: 10px;\n  }\n  form #tweenparams label {\n    min-width: 50px;\n  }\n  form #options button {\n    width: 65px;\n  }\n  form fieldset {\n    padding: 0 10px 0 10px;\n    margin: 5px 0 0 0;\n  }\n  form fieldset:first-child {\n    margin-top: -5px;\n  }\n  form fieldset legend {\n    padding: 0 5px 0 5px;\n    margin: 0;\n  }\n\n  .move {\n    cursor: move;\n  }\n  .move * {\n    cursor: auto;\n  }\n  .move label {\n    cursor: default;\n  }\n\n  /*\n    MENU\n  */\n\n  ul#menu, ul#menu ul {\n    list-style: none;\n    padding: 0;\n  }\n\n  ul#menu {\n    position: fixed;\n    z-index: 999;\n    width: 540px;\n    left: 50%;\n    margin: 10px auto auto -270px;\n    text-align: center;\n  }\n\n  ul#menu > li {\n    display: inline-block;\n    margin: 0 5px 0 5px;\n    position: relative;\n    min-height: 30px;\n    background-color: #79b0ee;\n    vertical-align: top;\n    min-width: 165px;\n  }\n  ul#menu li a {\n    padding: 0 5px 0 5px;\n    display: block;\n    text-decoration: none;\n    line-height: 30px;\n    color: white;\n    text-transform: uppercase;\n    letter-spacing: 0.05em;\n    font-size: 15px;\n  }\n  ul#menu ul {\n    display: none;\n  }\n\n  ul#menu li:hover > a, ul#menu li.current > a {\n    color: #2e639e;\n  }\n\n  ul#menu li:hover ul, html.touch ul#menu li.open ul {\n    display: block;\n    width: 100%;\n    padding: 5px 0 5px 0;\n    border-top: 1px dashed white;\n  }\n  ul#menu ul li a {\n    text-transform: none;\n    font-size: 12px;\n    line-height: 20px;\n    font-weight: lighter;\n    color: #133f71;\n  }\n  ul#menu ul li.current a {\n    background-color: #FFFFFF;\n  }\n  ul#menu ul li a:hover {\n    background-color: #3883d8;\n    color: white;\n  }\n\n  .menuwrap {\n    position: fixed;\n    background-color: white;\n    background-color: rgba(255, 255, 255, 0.9);\n    min-width: 540px;\n    left: 50%;\n    margin-left: -270px;\n    min-height: 51px;\n    border-bottom-left-radius: 8px;\n    border-bottom-right-radius: 8px;\n    z-index: 99999;\n    text-align: center;\n    transition: top 0.5s;\n    -webkit-transition: top 0.5s; /* Safari */\n    transition-delay: 1s;\n    -webkit-transition-delay: 1s; /* Safari */\n  }\n\n  #titlechart .menuwrap {\n    position: absolute;\n    z-index: inherit;\n    background-color: transparent;\n  }\n\n  .menuwrap ul#menu {\n    position: absolute;\n  }\n  .menuwrap > a.prev, .menuwrap > a.next {\n    display: block;\n    position: absolute;\n    background-color: white;\n    background-color: rgba(255, 255, 255, 0.9);\n    line-height: 30px;\n    width: 30px;\n    height: 30px;\n    top: 11px;\n    margin: 0 280px;\n    box-sizing: border-box;\n  }\n  .menuwrap > a.prev:hover, .menuwrap > a.next:hover {\n    text-decoration: none;\n    background-color: #79b0ee;\n    color: #FFFFFF;\n  }\n  .menuwrap > a.prev {\n    margin-left: 0;\n    padding-right: 2px;\n    right: 50%;\n  }\n  .menuwrap > a.next {\n    margin-right: 0;\n    padding-left: 4px;\n    left: 50%;\n  }\n  /*\n    mobile\n  */\n  html.touch .menuwrap {\n    z-index: 999999;\n    box-sizing: content-box;\n    min-width: 0;\n    width: 100%;\n    margin: 0;\n    left: 0;\n    top: 0;\n    height: auto;\n    background-color: transparent;\n  }\n  html.touch ul#menu {\n    position: static;\n    margin: 100px 0 0 0;\n    text-align: center;\n    width: 100%;\n    left: 0;\n    display: none;\n  }\n  html.touch .menuwrap.open {\n    height: 100%;\n    background-color: rgba(255, 255, 255, 0.9);\n    overflow: scroll;\n  }\n  html.touch .menuwrap.open ul#menu {\n    display: block;\n  }\n\n  html.touch ul#menu > li {\n    display: block;\n    margin: 10px;\n    height: auto;\n  }\n  html.touch ul#menu ul {\n    margin-top: 10px;\n    padding-top: 10px;\n    border-top: 1px dashed white;\n  }\n  html.touch ul#menu li {\n    padding: 10px 0;\n  }\n  html.touch ul#menu li ul li{\n  }\n  html.touch ul#menu > li a {\n    color: #2e639e;\n    font-size: 4em;\n    line-height: 1.2em;\n  }\n  html.touch ul#menu ul li a {\n    font-size: 2.5em;\n    line-height: 1.2em;\n  }\n  html.touch ul#menu ul li a {\n  }\n  html.touch ul#menu ul {\n    display: block;\n  }\n  html.touch ul#menu ul li.current a {\n    background-color: transparent;\n  }\n  html.touch ul#menu ul li a:hover {\n    background-color: transparent;\n  }\n  html.touch ul#menu ul li a:active {\n    color: white;\n  }\n  html.touch .menuwrap > a.prev, html.touch .menuwrap > a.next, html.touch .menubtn {\n    width: 80px;\n    height: 80px;\n    dius: 40px;\n    top: 10px;\n    background-color: #3883d8;\n    color: white;\n    font-size: 4em;\n    line-height: 1.5em;\n  }\n  html.touch .menuwrap > a.prev:active, html.touch .menuwrap > a.next:active, html.touch .menubtn:active {\n    background-color: white;\n    color: #3883d8;\n    border: 2px solid #3883d8;\n  }\n  html.touch .menuwrap > a.prev {\n    margin-right: 70px;\n    padding-right: 10px; \n  }\n  html.touch .menuwrap > a.next {\n    margin-left: 70px;\n    padding-left: 10px;\n  }\n  html.touch .menubtn {\n    padding: 0;\n    border: 0;\n    position: absolute;\n    left: 50%;\n    margin-left: -40px;\n    line-height: 0;\n    outline: none;\n\n    appearance: none;\n    -webkit-justify-content: center;\n    -ms-flex-pack: center;\n    justify-content: center;\n    -webkit-align-items: center;\n    -ms-flex-align: center;\n    align-items: center;\n    transition: 0.3s;\n    -webkit-user-select: none;\n    -moz-user-select: none;\n    -ms-user-select: none;\n    user-select: none;\n  }\n  html.touch .menubtn:active .button-lines, html.touch .menubtn:active .button-lines::before, html.touch .menubtn:active .button-lines::after{\n    background: #3883d8;\n  }\n  html.touch .menubtn .button-lines, html.touch .menubtn .button-lines::before, html.touch .menubtn .button-lines::after {\n    display: inline-block;\n    height: 6px;\n    width: 35px;\n    dius: 4px;\n    transition: 0.3s;\n    background: #FFFFFF;\n    position: relative;\n    left: 0;\n    top: -5px;\n  }\n  html.touch .menubtn .button-lines::before, html.touch .menubtn .button-lines::after {\n    content: '';\n    position: absolute;\n  }\n  html.touch .menubtn .button-lines::before {\n    top: 12px;\n  }\n  html.touch .menubtn .button-lines::after {\n    top: -12px;\n  }\n  html.touch .menuwrap.open .menubtn .button-lines {\n    background: transparent;\n  }\n  html.touch .menuwrap.open .menubtn .button-lines::before {\n    top: 0px;\n    -o-transform: rotate3d(0, 0, 1, -45deg);\n    -moz-transform: rotate3d(0, 0, 1, -45deg);\n    -webkit-transform: rotate3d(0, 0, 1, -45deg);\n    transform: rotate3d(0, 0, 1, -45deg);\n    -o-transform-origin: 50% 50%;\n    -moz-transform-origin: 50% 50%;\n    -webkit-transform-origin: 50% 50%;\n    transform-origin: 50% 50%;\n  }\n  html.touch .menuwrap.open .menubtn .button-lines::after {\n    top: 0px;\n    -o-transform: rotate3d(0, 0, 1, 45deg);\n    -moz-transform: rotate3d(0, 0, 1, 45deg);\n    -webkit-transform: rotate3d(0, 0, 1, 45deg);\n    transform: rotate3d(0, 0, 1, 45deg);\n    -o-transform-origin: 50% 50%;\n    -moz-transform-origin: 50% 50%;\n    -webkit-transform-origin: 50% 50%;\n    transform-origin: 50% 50%;\n  }\n\n\n  /*\n    Codecontainer\n  */\n  #codecontainer {\n    position: fixed;\n    top: 30px;\n    bottom: 20px;\n    right: 20px;\n    left: 20px;\n    background-color: white;\n    dius: 4px;\n    z-index: 99999;\n    min-height: 300px;\n  }\n  #codecontainer pre {\n    margin: 0;\n    padding: 0;\n    line-height: 16px;\n    tab-size: 4;\n  }\n  #codecontainer pre .break {\n    background-color: #F6F6F6;\n    font-weight: bold;\n    color: #aaa;\n  }\n  #codecontainer pre .break:before {\n    content: \"áŽ’\"\n  }\n  #codecontainer .codewrap {\n    position: absolute;\n    top: 10px;\n    bottom: 10px;\n    width: 100%;\n    overflow: hidden;\n    overflow: scroll;\n    white-space: nowrap;\n  }\n  #codecontainer .code, #codecontainer .linenumbers {\n    min-height: 100%;\n  }\n  #codecontainer .code {\n    padding: 0;\n    display: inline-block;\n  }\n  #codecontainer .code {\n    padding: 0 15px 10px 5px;\n  }\n  #codecontainer .linenumbers {\n    float: left;\n    padding: 0px 5px 0px 10px;\n    color: #aaa;\n    text-align: right;\n    border-right: 1px solid #e5e5e5;\n  }\n  #codecontainer span.indent {\n    width: 31px;\n    display: inline-block;\n    white-space: nowrap;\n  }\n  #codecontainer #close.button {\n    position: fixed;\n    top: 20px;\n    right: 10px;\n    width: 20px;\n    height: 20px;\n  }\n  #codecontainer #select.button {\n    position: fixed;\n    top: 20px;\n    right: 40px;\n    height: 20px;\n    padding: 0 10px 0 10px;\n  }\n  #codecontainer #close.button:after {\n    content: \"à¾¾\";\n  }\n  #codecontainer .button {\n    background-color: white;\n    dius: 10px;\n    border: 1px solid #e5e5e5;\n    text-align: center;\n    cursor: pointer;\n    color: #2e639e;\n  }\n  #codecontainer .button:hover {\n    background-color: #3883d8;\n    color: white;\n  }\n\n  /*\n    OTHER\n  */\n  a.viewsource:after {\n    content: \" }\";\n  }\n  a.viewsource:before {\n    content: \"{ \";\n  }\n\n  #parallaxContainer {\n    width: 900px;\n    height: 500px;\n    top: 30px;\n    position: relative;\n  }\n  #parallaxContainer .layer1 {\n    height: 100%;\n    text-align: center;\n    // background-image: url(\"../img/example_parallax_l1.gif\");\n  }\n  #parallaxContainer .layer2 {\n    // background-image: url(\"../img/example_parallax_l2.png\");\n    position: absolute;\n    height: 139px;\n    width: 100%;\n    bottom: 32px\n  }\n  #parallaxContainer .layer3 {\n    // background-image: url(\"../img/example_parallax_l3.gif\");\n    position: absolute;\n    height: 32px;\n    width: 100%;\n    bottom: 0px;\n  }\n  #parallaxText {\n    width: 0;\n    height: 100%;\n    margin: auto;\n    position: relative;\n  }\n  #parallaxText .layer1, #parallaxText .layer2, #parallaxText .layer3 {\n    position: absolute;\n    font-size: 50px;\n    line-height: 50px;\n    margin-left: -150px;\n    margin-top: -25px;\n    width: 300px;\n    top: 50%;\n    left: 50%;\n    text-align: center;\n    color: #133f71;\n  }\n  #parallaxText .layer1 {\n    top: 48%;\n  }\n  #parallaxText .layer2 {\n    top: 49%;\n  }\n  #parallaxText .layer3 a {\n    display: block;\n    font-family: \"Source Sans Pro\", Arial, sans-serif;\n    font-style: normal;\n    font-weight: normal;\n  }\n  #parallax1 > div, #parallax2 > div, #parallax3 > div {\n    -webkit-transform: translateZ(0);-webkit-backface-visibility: hidden;-webkit-perspective: 1000;\n  }\n\n  .dynamicContent #content {\n    width: 390px;\n    margin: auto;\n    text-align: left;\n  }\n  .dynamicContent #content .box1 {\n    margin: 10px;\n  }\n\n  .dynamicContent #loader {\n    height: 0;\n    overflow: hidden;\n    line-height: 60px;\n  }\n  .dynamicContent #loader.active {\n    height: 60px;\n  }\n  .dynamicContent #loader img {\n    vertical-align: text-bottom;\n  }\n\n  #customactions {\n    height: 160px;\n    width: 170px;\n    margin: auto;\n    padding-top: 40px;\n    text-align: left;\n  }\n  #customactions label {\n    width: 100px;\n    display: inline-block;\n  }\n  #customactions code {\n    color: #3883d8;\n  }\n  #customactions a.viewsource {\n    margin-top: 20px;\n    display: block;\n    text-align: center;\n  }\n  .demo.responsiveDuration {\n    position: relative;\n  }\n  .responsiveDuration .box1 {\n    top: 50%;\n    left: 50%;\n    position: absolute;\n    margin-top: -50px;\n    margin-left: -50px;\n  }\n  #destroybox a {\n    display: block;\n    margin-top: 20px;\n  }\n  #destroybox a.disabled {\n    color: #79b0ee;\n  }\n  #mobileadvanced {\n    width: 150px;\n    height: 150px;\n  }\n  #mobileadvanced p {\n    margin-top: 50px;\n  }\n  #multiDirect {\n    text-align: left;\n    position: relative;\n  }\n  #multiDirect .box1 {\n    left: 50vw;\n    top: 200px;\n    margin-left: -60px;\n  }\n  #multiDirect .box1 p:first-child {\n    margin-top: 20px;\n  }\n\n  #imagesequence {\n    height: 300px;\n  }\n\n  .copyright {\n    font-variant: italic;\n    font-size: 11px;\n  }\n\n  #bezier {\n    overflow: hidden;\n    position: relative;\n  }\n  #bezier #plane {\n    position: absolute;\n    left: -100px;\n  }\n  #bezier a.viewsource {\n    margin: 100px;\n    display: inline-block;\n  }\n\n  .demo#section-slides, .demo#section-wipes {\n    height: 100%;\n    width: 100%;\n    background-image: none;\n  }\n  .demo#section-slides .panel, .demo#section-wipes .panel {\n    // background-image: url(\"../img/example_bg_spacer_v.gif\");\n  }\n  .demo#section-wipes #pinContainer .turqoise, .demo#section-wipes #pinContainer .green, .demo#section-slides #slideContainer .panel {\n    // background-image: url(\"../img/example_bg_spacer_h.gif\");\n  }\n  .demo#section-slides .panel > b, .demo#section-wipes .panel > b {\n    font-size: 15px;\n    color: white;\n    position: relative;\n    display: block;\n    height: 0;\n    overflow: visible;\n    top: 50%;\n  }\n\n  /*\n\n  Codehighlighting\n  github.com style (c) Vasily Polovnyov <vast@whiteants.net>\n\n  */\n\n  .hljs {\n    display: block; padding: 0.5em;\n    color: #333;\n    /*background: #f8f8f8*/\n  }\n\n  .hljs-comment,\n  .hljs-template_comment,\n  .diff .hljs-header,\n  .hljs-javadoc {\n    color: #998;\n    font-style: italic\n  }\n\n  .hljs-keyword,\n  .css .rule .hljs-keyword,\n  .hljs-winutils,\n  .javascript .hljs-title,\n  .nginx .hljs-title,\n  .hljs-subst,\n  .hljs-request,\n  .hljs-status {\n    color: #333;\n    font-weight: bold\n  }\n\n  .hljs-number,\n  .hljs-hexcolor,\n  .ruby .hljs-constant {\n    color: #099;\n  }\n\n  .hljs-string,\n  .hljs-tag .hljs-value,\n  .hljs-phpdoc,\n  .tex .hljs-formula {\n    color: #d14\n  }\n\n  .hljs-title,\n  .hljs-id,\n  .coffeescript .hljs-params,\n  .scss .hljs-preprocessor {\n    color: #900;\n    font-weight: bold\n  }\n\n  .javascript .hljs-title,\n  .lisp .hljs-title,\n  .clojure .hljs-title,\n  .hljs-subst {\n    font-weight: normal\n  }\n\n  .hljs-class .hljs-title,\n  .haskell .hljs-type,\n  .vhdl .hljs-literal,\n  .tex .hljs-command {\n    color: #458;\n    font-weight: bold\n  }\n\n  .hljs-tag,\n  .hljs-tag .hljs-title,\n  .hljs-rules .hljs-property,\n  .django .hljs-tag .hljs-keyword {\n    color: #000080;\n    font-weight: normal\n  }\n\n  .hljs-attribute,\n  .hljs-variable,\n  .lisp .hljs-body {\n    color: #008080\n  }\n\n  .hljs-regexp {\n    color: #009926\n  }\n\n  .hljs-symbol,\n  .ruby .hljs-symbol .hljs-string,\n  .lisp .hljs-keyword,\n  .tex .hljs-special,\n  .hljs-prompt {\n    color: #990073\n  }\n\n  .hljs-built_in,\n  .lisp .hljs-title,\n  .clojure .hljs-built_in {\n    color: #0086b3\n  }\n\n  .hljs-preprocessor,\n  .hljs-pragma,\n  .hljs-pi,\n  .hljs-doctype,\n  .hljs-shebang,\n  .hljs-cdata {\n    color: #999;\n    font-weight: bold\n  }\n\n  .hljs-deletion {\n    background: #fdd\n  }\n\n  .hljs-addition {\n    background: #dfd\n  }\n\n  .diff .hljs-change {\n    background: #0086b3\n  }\n\n  .hljs-chunk {\n    color: #aaa\n  }"]}]);
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/dist/runtime/api.js":
-/*!*****************************************************!*\
-  !*** ./node_modules/css-loader/dist/runtime/api.js ***!
-  \*****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-/*
-  MIT License http://www.opensource.org/licenses/mit-license.php
-  Author Tobias Koppers @sokra
-*/
-// css base code, injected by the css-loader
-// eslint-disable-next-line func-names
-module.exports = function (useSourceMap) {
-  var list = []; // return the list of modules as css string
-
-  list.toString = function toString() {
-    return this.map(function (item) {
-      var content = cssWithMappingToString(item, useSourceMap);
-
-      if (item[2]) {
-        return "@media ".concat(item[2], "{").concat(content, "}");
-      }
-
-      return content;
-    }).join('');
-  }; // import a list of modules into the list
-  // eslint-disable-next-line func-names
-
-
-  list.i = function (modules, mediaQuery) {
-    if (typeof modules === 'string') {
-      // eslint-disable-next-line no-param-reassign
-      modules = [[null, modules, '']];
-    }
-
-    var alreadyImportedModules = {};
-
-    for (var i = 0; i < this.length; i++) {
-      // eslint-disable-next-line prefer-destructuring
-      var id = this[i][0];
-
-      if (id != null) {
-        alreadyImportedModules[id] = true;
-      }
-    }
-
-    for (var _i = 0; _i < modules.length; _i++) {
-      var item = modules[_i]; // skip already imported module
-      // this implementation is not 100% perfect for weird media query combinations
-      // when a module is imported multiple times with different media queries.
-      // I hope this will never occur (Hey this way we have smaller bundles)
-
-      if (item[0] == null || !alreadyImportedModules[item[0]]) {
-        if (mediaQuery && !item[2]) {
-          item[2] = mediaQuery;
-        } else if (mediaQuery) {
-          item[2] = "(".concat(item[2], ") and (").concat(mediaQuery, ")");
-        }
-
-        list.push(item);
-      }
-    }
-  };
-
-  return list;
-};
-
-function cssWithMappingToString(item, useSourceMap) {
-  var content = item[1] || ''; // eslint-disable-next-line prefer-destructuring
-
-  var cssMapping = item[3];
-
-  if (!cssMapping) {
-    return content;
-  }
-
-  if (useSourceMap && typeof btoa === 'function') {
-    var sourceMapping = toComment(cssMapping);
-    var sourceURLs = cssMapping.sources.map(function (source) {
-      return "/*# sourceURL=".concat(cssMapping.sourceRoot).concat(source, " */");
-    });
-    return [content].concat(sourceURLs).concat([sourceMapping]).join('\n');
-  }
-
-  return [content].join('\n');
-} // Adapted from convert-source-map (MIT)
-
-
-function toComment(sourceMap) {
-  // eslint-disable-next-line no-undef
-  var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));
-  var data = "sourceMappingURL=data:application/json;charset=utf-8;base64,".concat(base64);
-  return "/*# ".concat(data, " */");
-}
-
-/***/ }),
-
 /***/ "./node_modules/native-url/dist/index.js":
 /*!***********************************************!*\
   !*** ./node_modules/native-url/dist/index.js ***!
@@ -478,20 +421,20 @@ var e,t=(e=__webpack_require__(/*! querystring */ "./node_modules/querystring-es
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F_app&absolutePagePath=private-next-pages%2F_app.js!./":
-/*!*********************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F_app&absolutePagePath=private-next-pages%2F_app.js ***!
-  \*********************************************************************************************************************************************/
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F_app&absolutePagePath=next%2Fdist%2Fpages%2F_app!./":
+/*!*******************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F_app&absolutePagePath=next%2Fdist%2Fpages%2F_app ***!
+  \*******************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
     (window.__NEXT_P=window.__NEXT_P||[]).push(["/_app", function() {
-      var mod = __webpack_require__(/*! private-next-pages/_app.js */ "./pages/_app.js")
+      var mod = __webpack_require__(/*! next/dist/pages/_app */ "./node_modules/next/dist/pages/_app.js")
       if(true) {
-        module.hot.accept(/*! private-next-pages/_app.js */ "./pages/_app.js", function() {
+        module.hot.accept(/*! next/dist/pages/_app */ "./node_modules/next/dist/pages/_app.js", function() {
           if(!next.router.components["/_app"]) return
-          var updatedPage = __webpack_require__(/*! private-next-pages/_app.js */ "./pages/_app.js")
+          var updatedPage = __webpack_require__(/*! next/dist/pages/_app */ "./node_modules/next/dist/pages/_app.js")
           next.router.update("/_app", updatedPage)
         })
       }
@@ -1911,6 +1854,183 @@ exports.ST = exports.SP && typeof performance.mark === 'function' && typeof perf
 
 /***/ }),
 
+/***/ "./node_modules/next/dist/pages/_app.js":
+/*!**********************************************!*\
+  !*** ./node_modules/next/dist/pages/_app.js ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _classCallCheck = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js");
+
+var _createClass = __webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js");
+
+var _inherits = __webpack_require__(/*! @babel/runtime/helpers/inherits */ "./node_modules/@babel/runtime/helpers/inherits.js");
+
+var _possibleConstructorReturn = __webpack_require__(/*! @babel/runtime/helpers/possibleConstructorReturn */ "./node_modules/@babel/runtime/helpers/possibleConstructorReturn.js");
+
+var _getPrototypeOf = __webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ "./node_modules/@babel/runtime/helpers/getPrototypeOf.js");
+
+var _regeneratorRuntime = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+
+function _createSuper(Derived) { return function () { var Super = _getPrototypeOf(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+exports.__esModule = true;
+exports.Container = Container;
+exports.createUrl = createUrl;
+exports["default"] = void 0;
+
+var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var _utils = __webpack_require__(/*! ../next-server/lib/utils */ "./node_modules/next/dist/next-server/lib/utils.js");
+
+exports.AppInitialProps = _utils.AppInitialProps;
+/**
+* `App` component is used for initialize of pages. It allows for overwriting and full control of the `page` initialization.
+* This allows for keeping state between navigation, custom error handling, injecting additional data.
+*/
+
+function appGetInitialProps(_ref) {
+  var Component, ctx, pageProps;
+  return _regeneratorRuntime.async(function appGetInitialProps$(_context) {
+    while (1) {
+      switch (_context.prev = _context.next) {
+        case 0:
+          Component = _ref.Component, ctx = _ref.ctx;
+          _context.next = 3;
+          return _regeneratorRuntime.awrap((0, _utils.loadGetInitialProps)(Component, ctx));
+
+        case 3:
+          pageProps = _context.sent;
+          return _context.abrupt("return", {
+            pageProps: pageProps
+          });
+
+        case 5:
+        case "end":
+          return _context.stop();
+      }
+    }
+  }, null, null, null, Promise);
+}
+
+var App = /*#__PURE__*/function (_react$default$Compon) {
+  _inherits(App, _react$default$Compon);
+
+  var _super = _createSuper(App);
+
+  function App() {
+    _classCallCheck(this, App);
+
+    return _super.apply(this, arguments);
+  }
+
+  _createClass(App, [{
+    key: "componentDidCatch",
+    // Kept here for backwards compatibility.
+    // When someone ended App they could call `super.componentDidCatch`.
+    // @deprecated This method is no longer needed. Errors are caught at the top level
+    value: function componentDidCatch(error, _errorInfo) {
+      throw error;
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this$props = this.props,
+          router = _this$props.router,
+          Component = _this$props.Component,
+          pageProps = _this$props.pageProps,
+          __N_SSG = _this$props.__N_SSG,
+          __N_SSP = _this$props.__N_SSP;
+      return _react["default"].createElement(Component, Object.assign({}, pageProps, // we don't add the legacy URL prop if it's using non-legacy
+      // methods like getStaticProps and getServerSideProps
+      !(__N_SSG || __N_SSP) ? {
+        url: createUrl(router)
+      } : {}));
+    }
+  }]);
+
+  return App;
+}(_react["default"].Component);
+
+exports["default"] = App;
+App.origGetInitialProps = appGetInitialProps;
+App.getInitialProps = appGetInitialProps;
+var warnContainer;
+var warnUrl;
+
+if (true) {
+  warnContainer = (0, _utils.execOnce)(function () {
+    console.warn("Warning: the `Container` in `_app` has been deprecated and should be removed. https://err.sh/zeit/next.js/app-container-deprecated");
+  });
+  warnUrl = (0, _utils.execOnce)(function () {
+    console.error("Warning: the 'url' property is deprecated. https://err.sh/zeit/next.js/url-deprecated");
+  });
+} // @deprecated noop for now until removal
+
+
+function Container(p) {
+  if (true) warnContainer();
+  return p.children;
+}
+
+function createUrl(router) {
+  // This is to make sure we don't references the router object at call time
+  var pathname = router.pathname,
+      asPath = router.asPath,
+      query = router.query;
+  return {
+    get query() {
+      if (true) warnUrl();
+      return query;
+    },
+
+    get pathname() {
+      if (true) warnUrl();
+      return pathname;
+    },
+
+    get asPath() {
+      if (true) warnUrl();
+      return asPath;
+    },
+
+    back: function back() {
+      if (true) warnUrl();
+      router.back();
+    },
+    push: function push(url, as) {
+      if (true) warnUrl();
+      return router.push(url, as);
+    },
+    pushTo: function pushTo(href, as) {
+      if (true) warnUrl();
+      var pushRoute = as ? href : '';
+      var pushUrl = as || href;
+      return router.push(pushRoute, pushUrl);
+    },
+    replace: function replace(url, as) {
+      if (true) warnUrl();
+      return router.replace(url, as);
+    },
+    replaceTo: function replaceTo(href, as) {
+      if (true) warnUrl();
+      var replaceRoute = as ? href : '';
+      var replaceUrl = as || href;
+      return router.replace(replaceRoute, replaceUrl);
+    }
+  };
+}
+
+/***/ }),
+
 /***/ "./node_modules/querystring-es3/decode.js":
 /*!************************************************!*\
   !*** ./node_modules/querystring-es3/decode.js ***!
@@ -3127,403 +3247,14 @@ try {
 
 /***/ }),
 
-/***/ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js":
-/*!****************************************************************************!*\
-  !*** ./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js ***!
-  \****************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var stylesInDom = {};
-
-var isOldIE = function isOldIE() {
-  var memo;
-  return function memorize() {
-    if (typeof memo === 'undefined') {
-      // Test for IE <= 9 as proposed by Browserhacks
-      // @see http://browserhacks.com/#hack-e71d8692f65334173fee715c222cb805
-      // Tests for existence of standard globals is to allow style-loader
-      // to operate correctly into non-standard environments
-      // @see https://github.com/webpack-contrib/style-loader/issues/177
-      memo = Boolean(window && document && document.all && !window.atob);
-    }
-
-    return memo;
-  };
-}();
-
-var getTarget = function getTarget() {
-  var memo = {};
-  return function memorize(target) {
-    if (typeof memo[target] === 'undefined') {
-      var styleTarget = document.querySelector(target); // Special case to return head of iframe instead of iframe itself
-
-      if (window.HTMLIFrameElement && styleTarget instanceof window.HTMLIFrameElement) {
-        try {
-          // This will throw an exception if access to iframe is blocked
-          // due to cross-origin restrictions
-          styleTarget = styleTarget.contentDocument.head;
-        } catch (e) {
-          // istanbul ignore next
-          styleTarget = null;
-        }
-      }
-
-      memo[target] = styleTarget;
-    }
-
-    return memo[target];
-  };
-}();
-
-function listToStyles(list, options) {
-  var styles = [];
-  var newStyles = {};
-
-  for (var i = 0; i < list.length; i++) {
-    var item = list[i];
-    var id = options.base ? item[0] + options.base : item[0];
-    var css = item[1];
-    var media = item[2];
-    var sourceMap = item[3];
-    var part = {
-      css: css,
-      media: media,
-      sourceMap: sourceMap
-    };
-
-    if (!newStyles[id]) {
-      styles.push(newStyles[id] = {
-        id: id,
-        parts: [part]
-      });
-    } else {
-      newStyles[id].parts.push(part);
-    }
-  }
-
-  return styles;
-}
-
-function addStylesToDom(styles, options) {
-  for (var i = 0; i < styles.length; i++) {
-    var item = styles[i];
-    var domStyle = stylesInDom[item.id];
-    var j = 0;
-
-    if (domStyle) {
-      domStyle.refs++;
-
-      for (; j < domStyle.parts.length; j++) {
-        domStyle.parts[j](item.parts[j]);
-      }
-
-      for (; j < item.parts.length; j++) {
-        domStyle.parts.push(addStyle(item.parts[j], options));
-      }
-    } else {
-      var parts = [];
-
-      for (; j < item.parts.length; j++) {
-        parts.push(addStyle(item.parts[j], options));
-      }
-
-      stylesInDom[item.id] = {
-        id: item.id,
-        refs: 1,
-        parts: parts
-      };
-    }
-  }
-}
-
-function insertStyleElement(options) {
-  var style = document.createElement('style');
-
-  if (typeof options.attributes.nonce === 'undefined') {
-    var nonce =  true ? __webpack_require__.nc : undefined;
-
-    if (nonce) {
-      options.attributes.nonce = nonce;
-    }
-  }
-
-  Object.keys(options.attributes).forEach(function (key) {
-    style.setAttribute(key, options.attributes[key]);
-  });
-
-  if (typeof options.insert === 'function') {
-    options.insert(style);
-  } else {
-    var target = getTarget(options.insert || 'head');
-
-    if (!target) {
-      throw new Error("Couldn't find a style target. This probably means that the value for the 'insert' parameter is invalid.");
-    }
-
-    target.appendChild(style);
-  }
-
-  return style;
-}
-
-function removeStyleElement(style) {
-  // istanbul ignore if
-  if (style.parentNode === null) {
-    return false;
-  }
-
-  style.parentNode.removeChild(style);
-}
-/* istanbul ignore next  */
-
-
-var replaceText = function replaceText() {
-  var textStore = [];
-  return function replace(index, replacement) {
-    textStore[index] = replacement;
-    return textStore.filter(Boolean).join('\n');
-  };
-}();
-
-function applyToSingletonTag(style, index, remove, obj) {
-  var css = remove ? '' : obj.css; // For old IE
-
-  /* istanbul ignore if  */
-
-  if (style.styleSheet) {
-    style.styleSheet.cssText = replaceText(index, css);
-  } else {
-    var cssNode = document.createTextNode(css);
-    var childNodes = style.childNodes;
-
-    if (childNodes[index]) {
-      style.removeChild(childNodes[index]);
-    }
-
-    if (childNodes.length) {
-      style.insertBefore(cssNode, childNodes[index]);
-    } else {
-      style.appendChild(cssNode);
-    }
-  }
-}
-
-function applyToTag(style, options, obj) {
-  var css = obj.css;
-  var media = obj.media;
-  var sourceMap = obj.sourceMap;
-
-  if (media) {
-    style.setAttribute('media', media);
-  }
-
-  if (sourceMap && btoa) {
-    css += "\n/*# sourceMappingURL=data:application/json;base64,".concat(btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))), " */");
-  } // For old IE
-
-  /* istanbul ignore if  */
-
-
-  if (style.styleSheet) {
-    style.styleSheet.cssText = css;
-  } else {
-    while (style.firstChild) {
-      style.removeChild(style.firstChild);
-    }
-
-    style.appendChild(document.createTextNode(css));
-  }
-}
-
-var singleton = null;
-var singletonCounter = 0;
-
-function addStyle(obj, options) {
-  var style;
-  var update;
-  var remove;
-
-  if (options.singleton) {
-    var styleIndex = singletonCounter++;
-    style = singleton || (singleton = insertStyleElement(options));
-    update = applyToSingletonTag.bind(null, style, styleIndex, false);
-    remove = applyToSingletonTag.bind(null, style, styleIndex, true);
-  } else {
-    style = insertStyleElement(options);
-    update = applyToTag.bind(null, style, options);
-
-    remove = function remove() {
-      removeStyleElement(style);
-    };
-  }
-
-  update(obj);
-  return function updateStyle(newObj) {
-    if (newObj) {
-      if (newObj.css === obj.css && newObj.media === obj.media && newObj.sourceMap === obj.sourceMap) {
-        return;
-      }
-
-      update(obj = newObj);
-    } else {
-      remove();
-    }
-  };
-}
-
-module.exports = function (list, options) {
-  options = options || {};
-  options.attributes = typeof options.attributes === 'object' ? options.attributes : {}; // Force single-tag solution on IE6-9, which has a hard limit on the # of <style>
-  // tags it will allow on a page
-
-  if (!options.singleton && typeof options.singleton !== 'boolean') {
-    options.singleton = isOldIE();
-  }
-
-  var styles = listToStyles(list, options);
-  addStylesToDom(styles, options);
-  return function update(newList) {
-    var mayRemove = [];
-
-    for (var i = 0; i < styles.length; i++) {
-      var item = styles[i];
-      var domStyle = stylesInDom[item.id];
-
-      if (domStyle) {
-        domStyle.refs--;
-        mayRemove.push(domStyle);
-      }
-    }
-
-    if (newList) {
-      var newStyles = listToStyles(newList, options);
-      addStylesToDom(newStyles, options);
-    }
-
-    for (var _i = 0; _i < mayRemove.length; _i++) {
-      var _domStyle = mayRemove[_i];
-
-      if (_domStyle.refs === 0) {
-        for (var j = 0; j < _domStyle.parts.length; j++) {
-          _domStyle.parts[j]();
-        }
-
-        delete stylesInDom[_domStyle.id];
-      }
-    }
-  };
-};
-
-/***/ }),
-
-/***/ "./pages/_app.js":
-/*!***********************!*\
-  !*** ./pages/_app.js ***!
-  \***********************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return MyApp; });
-/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _styles_global_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../styles/global.scss */ "./styles/global.scss");
-/* harmony import */ var _styles_global_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_styles_global_scss__WEBPACK_IMPORTED_MODULE_2__);
-
-var _jsxFileName = "/Users/williamcole/Documents/Free/rob-game/pages/_app.js";
-
-var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
-
-function MyApp(_ref) {
-  var Component = _ref.Component,
-      pageProps = _ref.pageProps;
-  return __jsx(Component, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, pageProps, {
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 4,
-      columnNumber: 12
-    }
-  }));
-}
-
-/***/ }),
-
-/***/ "./styles/global.scss":
-/*!****************************!*\
-  !*** ./styles/global.scss ***!
-  \****************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var content = __webpack_require__(/*! !../node_modules/css-loader/dist/cjs.js??ref--5-oneOf-6-1!../node_modules/next/dist/compiled/postcss-loader??__nextjs_postcss!../node_modules/resolve-url-loader??ref--5-oneOf-6-3!../node_modules/sass-loader/dist/cjs.js??ref--5-oneOf-6-4!./global.scss */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/next/dist/compiled/postcss-loader/index.js?!./node_modules/resolve-url-loader/index.js?!./node_modules/sass-loader/dist/cjs.js?!./styles/global.scss");
-
-if (typeof content === 'string') {
-  content = [[module.i, content, '']];
-}
-
-var options = {}
-
-options.insert = function(element){// These elements should always exist. If they do not,
-// this code should fail.
-var anchorElement=document.querySelector('#__next_css__DO_NOT_USE__');var parentNode=anchorElement.parentNode;// Normally <head>
-// Each style tag should be placed right before our
-// anchor. By inserting before and not after, we do not
-// need to track the last inserted element.
-parentNode.insertBefore(element,anchorElement)// Remember: this is development only code.
-//
-// After styles are injected, we need to remove the
-// <style> tags that set `body { display: none; }`.
-//
-// We use `requestAnimationFrame` as a way to defer
-// this operation since there may be multiple style
-// tags.
-;(self.requestAnimationFrame||setTimeout)(function(){for(var x=document.querySelectorAll('[data-next-hide-fouc]'),i=x.length;i--;){x[i].parentNode.removeChild(x[i]);}});};
-options.singleton = false;
-
-var update = __webpack_require__(/*! ../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js")(content, options);
-
-if (content.locals) {
-  module.exports = content.locals;
-}
-
-if (true) {
-  if (!content.locals) {
-    module.hot.accept(
-      /*! !../node_modules/css-loader/dist/cjs.js??ref--5-oneOf-6-1!../node_modules/next/dist/compiled/postcss-loader??__nextjs_postcss!../node_modules/resolve-url-loader??ref--5-oneOf-6-3!../node_modules/sass-loader/dist/cjs.js??ref--5-oneOf-6-4!./global.scss */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/next/dist/compiled/postcss-loader/index.js?!./node_modules/resolve-url-loader/index.js?!./node_modules/sass-loader/dist/cjs.js?!./styles/global.scss",
-      function () {
-        var newContent = __webpack_require__(/*! !../node_modules/css-loader/dist/cjs.js??ref--5-oneOf-6-1!../node_modules/next/dist/compiled/postcss-loader??__nextjs_postcss!../node_modules/resolve-url-loader??ref--5-oneOf-6-3!../node_modules/sass-loader/dist/cjs.js??ref--5-oneOf-6-4!./global.scss */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/next/dist/compiled/postcss-loader/index.js?!./node_modules/resolve-url-loader/index.js?!./node_modules/sass-loader/dist/cjs.js?!./styles/global.scss");
-
-        if (typeof newContent === 'string') {
-          newContent = [[module.i, newContent, '']];
-        }
-        
-        update(newContent);
-      }
-    )
-  }
-
-  module.hot.dispose(function() { 
-    update();
-  });
-}
-
-/***/ }),
-
 /***/ 0:
-/*!*******************************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2F_app&absolutePagePath=private-next-pages%2F_app.js ./node_modules/next/dist/client/router.js ***!
-  \*******************************************************************************************************************************************/
+/*!*****************************************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2F_app&absolutePagePath=next%2Fdist%2Fpages%2F_app ./node_modules/next/dist/client/router.js ***!
+  \*****************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! next-client-pages-loader?page=%2F_app&absolutePagePath=private-next-pages%2F_app.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F_app&absolutePagePath=private-next-pages%2F_app.js!./");
+__webpack_require__(/*! next-client-pages-loader?page=%2F_app&absolutePagePath=next%2Fdist%2Fpages%2F_app! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F_app&absolutePagePath=next%2Fdist%2Fpages%2F_app!./");
 module.exports = __webpack_require__(/*! /Users/williamcole/Documents/Free/rob-game/node_modules/next/dist/client/router.js */"./node_modules/next/dist/client/router.js");
 
 
