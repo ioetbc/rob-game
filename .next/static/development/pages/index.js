@@ -1520,7 +1520,7 @@ var App = /*#__PURE__*/function (_Component) {
 
 /***/ }),
 
-/***/ 2:
+/***/ 1:
 /*!****************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fwilliamcole%2FDocuments%2FFree%2Frob-game%2Fpages%2Findex.js ***!
   \****************************************************************************************************************************************/
@@ -1543,5 +1543,5 @@ module.exports = dll_2adc2403d89adc16ead0;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
+},[[1,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map
