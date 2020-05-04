@@ -1,5 +1,9 @@
 import '../styles/global.scss';
-
-export default function MyApp({ Component, pageProps }) {
-    return <Component {...pageProps} />
+import { AnimatePresence } from 'framer-motion'
+export default function MyApp({ Component, pageProps, router }) {
+    return (
+        <AnimatePresence exitBeforeEnter>
+            <Component {...pageProps} key={router.route} />        
+        </AnimatePresence>
+    )
 }
