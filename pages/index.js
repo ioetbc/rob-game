@@ -117,6 +117,13 @@ class App extends Component {
                     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/debug.addIndicators.min.js" />
                     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenMax.min.js" />
                     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js" />
+                    <link rel="stylesheet" href="https://use.typekit.net/nvy3bvq.css"></link>
+                    <link
+                        rel="preload"
+                        href="/fonts/acumin-pro.woff2"
+                        as="font"
+                        crossOrigin=""
+                    />
                 </Head>
 
                 <div id="example-wrapper" class="horizontal">
