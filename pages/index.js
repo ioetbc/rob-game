@@ -3,6 +3,8 @@ import Head from 'next/head'
 import Link from 'next/link'
 import { motion } from 'framer-motion';
 
+import invertScroll from '../utils/invertScroll';
+
 class App extends Component {
     constructor(props) {
         super(props)
@@ -10,10 +12,10 @@ class App extends Component {
     }
 
     componentDidMount() {
+        const item = document.getElementById('example-wrapper');
+        document.getElementsByTagName('body')[0].style.overflow = 'hidden';
 
-        const item = document.getElementById('example-wrapper')
-        item.addEventListener('wheel', (e) => item.scrollLeft -= (e.deltaY * 1.5));
-        
+        item.addEventListener('wheel', (e) => invertScroll(e, item));
         var controller = new ScrollMagic.Controller({ vertical: false });
 
         var tween = TweenMax.to("#target", 1, { width: "+=800px" });
@@ -99,16 +101,11 @@ class App extends Component {
 
     }
 
-//     <motion.div
-//     class="test red"
-//     initial={{ y: "200%", height: '100vh' }}
-//     exit={{ y: "-100%", height: 0 }}
-//     transition={{
-//         delay: 2,
-//         duration: 4,
-//         y: { type: "spring" }                        }}
-    
-// />
+    componentWillUnmount() {
+        const item = document.getElementById('example-wrapper');
+        item.removeEventListener('wheel', invertScroll);
+        document.getElementsByTagName('body')[0].style.overflow = 'initial';
+    }
 
     render() {
         return (
@@ -130,75 +127,75 @@ class App extends Component {
                                 <Link href="/project" onClick={() => this.setState({ transition: true })}>
                                     <div id="target" class="box2 blue">
                                         <div class="image-wrapper">
-                                            <img id="hello" src="/images/palceholder-probject-image.jpeg" />                                
+                                            <img id="hello" className="thumbnail" src="/images/palceholder-probject-image.jpeg" />                                
                                         </div>
                                     </div>
                                 </Link>
 
                                 <div id="target2" class="box2 blue">
                                     <div class="image-wrapper">
-                                        <img id="hello2" src="/images/palceholder-probject-image-2.jpeg" />
+                                        <img id="hello2" className="thumbnail" src="/images/palceholder-probject-image-2.jpeg" />
                                     </div>
                                 </div>
                                 <div id="target3" class="box2 blue">
                                     <div class="image-wrapper">
-                                        <img id="hello3" src="/images/palceholder-probject-image-3.jpeg" />
+                                        <img id="hello3" className="thumbnail" src="/images/palceholder-probject-image-3.jpeg" />
                                     </div>
                                 </div>
 
                                 <div id="target4" class="box2 blue">
                                     <div class="image-wrapper">
-                                        <img id="hello4" src="/images/palceholder-probject-image.jpeg" />
+                                        <img id="hello4" className="thumbnail" src="/images/palceholder-probject-image.jpeg" />
                                     </div>
                                 </div>
                                 <div id="target5" class="box2 blue">
                                     <div class="image-wrapper">
-                                        <img id="hello4" src="/images/palceholder-probject-image-2.jpeg" />
+                                        <img id="hello4" className="thumbnail" src="/images/palceholder-probject-image-2.jpeg" />
                                     </div>
                                 </div>
                                 <div id="target6" class="box2 blue">
                                     <div class="image-wrapper">
-                                        <img id="hello4" src="/images/palceholder-probject-image-3.jpeg" />
+                                        <img id="hello4" className="thumbnail" src="/images/palceholder-probject-image-3.jpeg" />
                                     </div>
                                 </div>
                                 <div id="target7" class="box2 blue">
                                     <div class="image-wrapper">
-                                        <img id="hello4" src="/images/palceholder-probject-image.jpeg" />
+                                        <img id="hello4" className="thumbnail" src="/images/palceholder-probject-image.jpeg" />
                                     </div>
                                 </div>
                                 <div id="target8" class="box2 blue">
                                     <div class="image-wrapper">
-                                        <img id="hello4" src="/images/palceholder-probject-image-2.jpeg" />
+                                        <img id="hello4" className="thumbnail" src="/images/palceholder-probject-image-2.jpeg" />
                                     </div>
                                 </div>
                                 <div id="target9" class="box2 blue">
                                     <div class="image-wrapper">
-                                        <img id="hello4" src="/images/palceholder-probject-image-3.jpeg" />
+                                        <img id="hello4" className="thumbnail" src="/images/palceholder-probject-image-3.jpeg" />
                                     </div>
                                 </div>
                                 <div id="target10" class="box2 blue">
                                     <div class="image-wrapper">
-                                        <img id="hello4" src="/images/palceholder-probject-image.jpeg" />
+                                        <img id="hello4" className="thumbnail" src="/images/palceholder-probject-image.jpeg" />
                                     </div>
                                 </div>
                                 <div id="target11" class="box2 blue">
                                     <div class="image-wrapper">
-                                        <img id="hello4" src="/images/palceholder-probject-image-2.jpeg" />
+                                        <img id="hello4" className="thumbnail" src="/images/palceholder-probject-image-2.jpeg" />
                                     </div>
                                 </div>
                                 <div id="target12" class="box2 blue">
                                     <div class="image-wrapper">
-                                        <img id="hello4" src="/images/palceholder-probject-image-3.jpeg" />
+                                        <img id="hello4" className="thumbnail" src="/images/palceholder-probject-image-3.jpeg" />
                                     </div>
                                 </div>
                                 <div id="target13" class="box2 blue">
                                     <div class="image-wrapper">
-                                        <img id="hello4" src="/images/palceholder-probject-image.jpeg" />
+                                        <img id="hello4" className="thumbnail" src="/images/palceholder-probject-image.jpeg" />
                                     </div>
                                 </div>
                                 <div id="target14" class="box2 blue">
                                     <div class="image-wrapper">
-                                        <img id="hello4" src="/images/palceholder-probject-image-2.jpeg" />
+                                        <img id="hello4" className="thumbnail" src="/images/palceholder-probject-image-2.jpeg" />
                                     </div>
                                 </div>
 
