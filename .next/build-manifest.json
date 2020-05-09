@@ -24,11 +24,11 @@
       "static/runtime/polyfills.js",
       "static/runtime/polyfills.js.map"
     ],
-    "/index": [
+    "/case-study": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/project": [
+    "/index": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ]

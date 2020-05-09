@@ -1,33 +1,14 @@
 
-import React, { Component } from 'react';
-import { motion } from 'framer-motion'
-import style from '../styles/project.module.scss'
+import React, { Component, Fragment } from 'react';
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+import style from '../styles/project.module.scss';
 
-class Project extends Component {
+class CaseStudy extends Component {
     render() {
 
-        const container = {
-            hidden: { opacity: 0 },
-            show: {
-              opacity: 1,
-              transition: {
-                delayChildren: 0.5,
-                staggerDirection: 1
-              }
-            }
-          }
-          
-          const item = {
-            hidden: { opacity: 0 },
-            show: { opacity: 1 }
-          }
-
         return (
-            <motion.div
-            variants={container}
-            initial="hidden"
-            animate="show"
-            >
+            <Fragment>
                 <div className={style.projectWrapper}>
                     <header className={style.projectHeader}>
                         <h1 className={style.projectHeading}>WorkLock</h1>
@@ -37,6 +18,11 @@ class Project extends Component {
                         <a className={style.link} href="worklock.co.uk">Go to site</a>
                     </header>
                     <main className={style.main}>
+                        <Link href="/">
+                            <div className={style.homeWrapper}>
+                                <img className={style.homeButton} src="/images/close-icon.svg" />            
+                            </div>
+                        </Link>
                         <section>
                             <img className="fullWidthImage" src="/images/project-main.jpg" />                        
                         </section>
@@ -97,9 +83,9 @@ class Project extends Component {
 
                     </main>
                 </div>
-            </motion.div>
+            </Fragment>
         )
     }
 }
 
-export default Project;
+export default CaseStudy;
